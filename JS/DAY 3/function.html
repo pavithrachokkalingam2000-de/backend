@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function basics</title>
+</head>
+<body>
+
+
+    <script>
+       // Task-1 
+
+       function createBankAccount(){
+        let balance=5000;
+
+     function checkBalance(){
+        console.log("Account Balance:",balance);
+        
+
+       }
+
+       return checkBalance();
+       }
+
+       let balance=10000;
+       console.log("Outside Balance:",balance);
+       let account = createBankAccount();
+       //account();
+
+       //Task-2
+
+       function createAccount(){
+        let balance=1000;
+
+        function deposite(amount){
+            balance=balance+amount;
+
+        }
+        function getbalance(){
+            console.log(balance);
+
+
+        }
+        return{
+            deposite:deposite,
+            getbalance:getbalance
+        };
+
+       }
+
+       let Account=createAccount();
+       Account.deposite(500);
+       Account.deposite(200);
+       Account.getbalance();
+
+       //Task-3
+       function createCounter(){
+        let count=0;
+        function increment(){
+            count++;
+
+        }
+        function decrement(){
+            count--;
+
+        }
+        function getCount(){
+            console.log(count);
+
+        }
+        return{
+            increment:increment,
+            decrement:decrement,
+            getCount:getCount
+            
+        };
+
+
+       }
+       let counter=createCounter();
+       counter.increment();
+       counter.increment();
+       counter.getCount();
+       counter.decrement();
+       counter.getCount();
+    
+
+
+
+
+
+
+        
+
+       
+
+        
+       
+       
+    </script>
+</body>
+</html>
