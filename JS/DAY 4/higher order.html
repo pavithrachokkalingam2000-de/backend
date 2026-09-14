@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order Array methods</title>
+</head>
+<body>
+
+    <script>
+        //Task -1
+        function createEmployee(){
+            let salary=20000;
+
+            return(amount)=>{
+                salary=salary+amount;
+                return salary
+            };
+        }
+        let updateSalary=createEmployee();
+        console.log(updateSalary(5000));
+        console.log(updateSalary(2000));
+        //Task -2
+        function createStock(){
+            let stock=10;
+            return{
+                addstock:(quantity)=>{
+                    stock=stock+quantity;
+                    console.log("stock:",stock);
+                },
+
+
+                 sellProduct:(quantity)=>{
+                    if(quantity>stock){
+                        console.log("Not enough stock");
+                    } else {
+                        stock=stock-quantity;
+                        console.log("stock:",stock);
+                    }
+                }
+                };
+                
+            };
+            let product=createStock();
+
+            product.addstock(5);
+            product.sellProduct(3);
+            product.sellProduct(2);
+
+        
+    </script>
+    
+</body>
+</html>
