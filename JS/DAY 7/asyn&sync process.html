@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus & synchronus and promises</title>
+</head>
+<body>
+    <script>
+        //Task 1
+        const calculate=(a,b,callback)=>{
+            let result=a+b;
+
+            callback(result);   
+
+        }
+        calculate(10,20,(result)=>{
+            console.log(result);
+        });
+
+        //Task -2
+        const checkNumber=(number)=>{
+            return new Promise((resolve,reject)=>{
+                if (number>10){
+                    resolve('valid number');
+
+                }else{
+                    reject('Invalid number');
+                }
+            });
+
+        }
+        checkNumber(20)
+        .then((result)=>{
+            console.log(result);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+
+        //Task -3
+        const correctNumber=(number)=>{
+            return new Promise((resolve,reject)=>{
+                if (number>10){
+                    resolve('valid number');
+
+                }else{
+                    reject('Invalid number');
+
+                }
+            });
+
+        };
+        const verifyNumber=async()=>{
+            try{
+                const result = await checkNumber(20);
+                console.log(result);
+
+            } catch(error){
+                console.log(eror);
+
+            }
+        }
+        verifyNumber();
+    </script>
+    
+</body>
+</html>
