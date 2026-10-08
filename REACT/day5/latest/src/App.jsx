@@ -81,7 +81,7 @@ function Task4(){
   );
 }
 
-function app(){
+function App(){
   return(
     <div>
       <Task1/>
@@ -90,9 +90,10 @@ function app(){
       <Task4/>
     </div>
   );
-
-
 }
+
+
+
    
 
   
@@ -101,4 +102,4 @@ function app(){
   
 
 
-export default app
+export default App
