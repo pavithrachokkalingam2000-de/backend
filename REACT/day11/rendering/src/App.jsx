@@ -56,6 +56,42 @@ function Task1(){
   );
 }
 
+//Task 3
+// function Task3(){
+//   const[product,setProduct]=useState({
+//     name:"laptop",
+//     price:45000,
+//     stock:10
+// })
+
+// function updatePrice(){
+//   setProduct({
+//     ...product,
+//     price:50000
+//   });
+// }
+
+// function addBrand(){
+//   setProduct({
+//     ...product,
+//     Brand:"Dell"
+//   });
+// }
+
+// return(
+//   <div>
+//     <h2>Product Details</h2>
+//     <p>name :{product.name}</p>
+//     <p>price:{product.price}</p>
+//     <p>stock:{product.stock}</p>
+//     <p>Brand:{product.Brand}</p>
+
+
+//     <button onClick={}></button>
+//   </div>
+// )
+// }
+
 function App(){
   return(
     <div>
