@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <script>
+        //Task1
+
+       let arr = [10, 45, 20, 45, 30];
+
+        let largest = -Infinity;
+        let secondLargest = -Infinity;
+
+        for (let num of arr) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            } else if (num > secondLargest && num < largest) {
+                secondLargest = num;
+            }
+        }
+
+        console.log(secondLargest);
+
+        //Task2
+        let data=[1, 2, 2, 3, 4, 4, 5]
+
+        let result=[];
+
+        for(let i=0;i<data.length;i++){
+            let found =false;
+
+            for(let j=0;j<result.length;j++){
+                if(data[i]===result[j]){
+                    found=true;
+                    break;
+                }
+            }
+             if(found===false){
+            result.push(data[i]);
+            
+        }
+        }
+        console.log(result);
+
+        //Task3
+        let str ="banana";
+        let result1={};
+        for(let char of str){
+            if(result1[char]){
+                result1[char]++;
+
+            }else{
+                result1[char]=1;
+            }
+        }
+        console.log(result1);
+
+        //Task4
+        let employees=[
+            {name:"Arun",salary:25000},
+            {name:"Priya",salary:35000},
+            {name:"Kumar",salary:40000},
+            {name:"Divya",salary:28000}
+        ];
+        let filteredEmployees=employees.filter((emp)=>emp.salary>30000);
+
+        let totalSalary = filteredEmployees.reduce(
+            (total,emp)=>total+emp.salary,0
+        );
+
+        console.log(filteredEmployees);
+        console.log("Total Salary:",totalSalary);
+
+        //Task5
+        let str1="I Love JavaScript";
+
+        let words= str1.split(" ");
+        let result2="";
+
+        for(let i=words.length-1;i>=0;i--){
+            result2=result2+words[i];
+
+            if(i !==0){
+                result2=result2+" ";
+
+            }
+        }
+        console.log(result2);
+        //Task6
+        let str2="aabbcdecd";
+
+        let result3= " ";
+
+        for (let i=0;i<str2.length;i++){
+            let count=0;
+
+            for (let j=0;j<str2.length;j++){
+                if(str2[i]===str2[j]){
+                    count++;
+                }
+            }
+            if(count===1){
+                result3=str2[i];
+                break;
+
+
+            }
+        }
+        console.log(result3);
+        //Task7
+        let employees1=[
+            {name:"Arun",department:"IT",salary:30000},
+            {name:"Priya",department:"HR",salary:25000},
+            {name:"Kumar",department:"IT",salary:40000},
+            {name:"Divya",department:"HR",salary:35000},
+            {name:"Ravi",department:"Sales",salary:20000}
+        ];
+
+        let result4={};
+
+        for (let emp of employees1){
+            let dept = emp.department;
+
+            if (!result4[dept]){
+                result4[dept]={
+                    employees:[],
+                    totalSalary:0
+                };
+
+
+            }
+            result4[dept].employees.push(emp.name);
+            result4[dept].totalSalary += emp.salary;
+        }
+        console.log(result4);
+        //Task8
+        
+        let arr2=[1,2,3,5,6,7]
+
+        for(let i=0;i<arr2.length;i++){
+            if(arr2[i+1] !== undefined && arr2[i+1]-arr2[i]!==1){
+                console.log(arr2[i]+1);
+                break;
+                
+            }
+        }
+
+
+
+
+
+
+
+        
+
+
+
+        
+        
+
+
+
+        
+    </script>
+    
+</body>
+</html>
+
