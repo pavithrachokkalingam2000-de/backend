@@ -2,14 +2,22 @@ import React, { useRef } from 'react'
 
 const App = () => {
 
-  const data=useRef(null)
+  
+  const data =useRef(null)
 
   const handleClick=()=>{
-    data.current.innerHTML="pavi"
-    data.current.style.color="red"
-    
+
+
+    data.current.innerHTML = "Welcome"
+  
+    data.current.style.color="black"
+
+  
+
     
   }
+
+
 
 
 
@@ -18,10 +26,10 @@ const App = () => {
   return (
     <>
     <div>
-      <h2 ref={data}></h2>
 
-      <button onClick={handleClick}>click</button>
-      
+      <h2 ref={data}></h2>
+       <button onClick={handleClick}>Click</button>
+
     </div>
     
     </>

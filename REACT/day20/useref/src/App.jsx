@@ -47,7 +47,7 @@ const Task1 = () => {
 
       <button onClick={clearInputs}>Clear</button>
 
-      <button>submit</button>
+      <button type="submit">submit</button>
 
     </div>
     </>
@@ -70,6 +70,9 @@ const Task2=()=>{
     passwordRef.current.type = "password";
 
   };
+  const clearPassword=()=>{
+    passwordRef.current.value=""
+  };
   return(
     <>
     <div>
@@ -81,6 +84,7 @@ const Task2=()=>{
       <button type="button" onClick={showPassword}>Show</button>
 
       <button type="button" onClick={hidePassword}>Hide</button>
+      <button type="button" onClick={clearPassword}>Clear</button>
     </div>
     
     </>
